@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 20px;
+    background-color: black;
+
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+.logo a {
+    text-decoration: none;
+    color: brown;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-list li {
+    font-size: 20px;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navbar-list a:hover {
+    color: Brown;
+}
+
+/* General styling for sections with images */
+.content-section {
+    text-align: right;
+}
+
+/* Image container for positioning */
+.image-container {
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        border-radius: 4px;
+        background: url('coffee.jpg') no-repeat center center;
+        background-size: cover;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        display: block;
+    }
+
+/* Styling for any text overlay */
+.text-overlay {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-align: left;
+    max-width: 400px; /* Adjust to control how much text fits in a line */
+    word-wrap: break-word; /* Ensures long words break onto the next line */
+    border-radius: 5px;
+}
+
+/* Heading styling */
+.text-overlay h2 {
+    font-size: 35px;
+}
+
+/* Paragraph styling */
+.text-overlay p {
+    font-size: 18px;
+
+}
+
+/* Centered image with text 2nd image on page */
+.centered-section {
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    border-radius: 4px;
+    background: url('coffee2.jpg') no-repeat center center;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: block;
+}
+
+.centered-section img {
+    width: 100%;
+    height: auto;
+}
+
+.centered-section .text-overlay {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.centered-section .text-overlay h3 {
+    font-size: 50px;
+}
+
+.centered-section .text-overlay p {
+    font-size: 20px;
+}
+
+/* story section */
+
+.our-story-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: black;
+    padding: 1.5rem;
+    border-radius: 30px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: static;
+    top: 250%;
+    left: 50%;
+    transform: translate(0%, -2%);
+}
+.text-content2 {
+    color: #fff;
+    max-width: 400px;
+}
+.text-content h4 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+.text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.image-content img {
+    width: 600px;
+    height: auto;
+    left: 59%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+                                /* menu page*/
+ .menu-item {
+      width: 250px;
+      text-align: center;
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 15px;
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .menu-item h5 {
+      margin: 15px 0 5px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .menu-item p {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* map for 0contact us page */
+
+
+/* Footer Specific */
+footer {
+    text-align: center;
+    background-color: #111;
+    color: white;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+      background-color: black;
+    }
+.navbar-list {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-end; /* Align items to the right */
+    }
+
+.navbar-list li {
+        margin-bottom: 10px;
+    }
+}

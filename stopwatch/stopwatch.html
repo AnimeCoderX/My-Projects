@@ -1,0 +1,85 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>StopWatch</title>
+        <style>
+            h1{
+                font-size: 48px;
+                text-align:center;
+                color:green;
+            }
+            body{
+                background-color: black;
+            }
+            p{
+                color:grey;
+                font-size:28px;
+                text-align:center;
+            }
+            .btn{
+                text-align:center;
+                margin:auto;
+                display:block;
+                padding:10px;
+                width:200px;
+            }
+            h2{
+                text-align:center;
+                color: white;
+                font-size:58px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>StopWatch</h1>
+        <p>It's just a stopwatch that's it.</p>
+        <h2 id="display">00:00:00</h2>
+        <button class="btn" id="start">Start</button>
+        <button class="btn" id="stop">Stop</button>
+        <button class="btn" id="reset">Reset</button>
+
+    <script>
+        let seconds = 0;
+        let interval = null;
+
+        const display = document.getElementById("display");
+        const startBtn = document.getElementById("start");
+        const stopBtn = document.getElementById("stop");
+        const resetBtn = document.getElementById("reset");
+
+        // 🟢 Start the stopwatch
+        startBtn.addEventListener("click", () => {
+            if (interval) return; // Avoid multiple intervals
+            interval = setInterval(updateTime, 1000);
+        });
+
+        // 🔴 Stop the stopwatch
+        stopBtn.addEventListener("click", () => {
+            clearInterval(interval);
+            interval = null;
+        });
+
+        // 🟡 Reset the stopwatch
+        resetBtn.addEventListener("click", () => {
+            clearInterval(interval);
+            interval = null;
+            seconds = 0;
+            display.innerText = formatTime(seconds);
+        });
+
+        // 🧠 Main time logic
+        function updateTime() {
+            seconds++;
+            display.innerText = formatTime(seconds);
+        }
+
+        // ⏱️ Format seconds into 00:00:00
+        function formatTime(totalSeconds) {
+            const hrs = String(Math.floor(totalSeconds / 3600)).padStart(2, "0");
+            const mins = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, "0");
+            const secs = String(totalSeconds % 60).padStart(2, "0");
+            return `${hrs}:${mins}:${secs}`;
+        }
+            </script>
+    </body>
+</html>
