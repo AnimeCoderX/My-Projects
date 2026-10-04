@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ansari.co — modern clothing and fashion.">
+  <title>Ansari.co | Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Ansari.co home">
+        <img src="images/logo.png" alt="Ansari.co logo">
+        <span>ANSARI<span class="gold">.CO</span></span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cart" href="#shop">Shop Now</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner slides: add your own image URL in script.js -> banners[].image -->
+    <section class="hero" id="hero">
+      <div class="hero-slides" id="heroSlides"></div>
+
+      <button class="hero-arrow prev" id="prevSlide" aria-label="Previous banner">‹</button>
+      <button class="hero-arrow next" id="nextSlide" aria-label="Next banner">›</button>
+      <div class="hero-dots" id="heroDots" aria-label="Banner navigation"></div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">OUR COLLECTION</p>
+            <h1>Made for your style.</h1>
+          </div>
+          <p class="section-copy">Explore our latest clothing collection, designed with clean details and everyday comfort.</p>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="feature-band" id="about">
+      <div class="container feature-grid">
+        <div>
+          <p class="eyebrow">WHY ANSARI.CO</p>
+          <h2>Simple. Premium. Timeless.</h2>
+        </div>
+        <div class="feature-items">
+          <div><strong>01</strong><span>Quality fabrics</span></div>
+          <div><strong>02</strong><span>Modern designs</span></div>
+          <div><strong>03</strong><span>Made for everyday wear</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div class="container newsletter-inner">
+        <div>
+          <p class="eyebrow">STAY UPDATED</p>
+          <h2>Get the latest from Ansari.co</h2>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <img src="images/logo.png" alt="Ansari.co logo">
+          <span>ANSARI<span class="gold">.CO</span></span>
+        </a>
+        <p>Contemporary clothing made for confident everyday style.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>info@ansari.co</p>
+        <p>Pakistan</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© 2026 Ansari.co. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
